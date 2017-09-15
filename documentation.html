@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width">
+	<title>elModal demos</title>
+	<link rel="stylesheet" type="text/css" href="dist/elModal.css">
+	<style type="text/css" media="screen">
+		body {
+			background-color: #e4e4e4;
+			font-family: serif;
+		}
+		.title {
+			color: #0ab2f7;
+			margin: 10px;
+			text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+		}
+		.wrap-title {
+			box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+			margin: -10px;
+		}
+		.wrap-title, .wrap-title .title {
+			padding: 5px;
+			color: white;
+			background-color: #0ab2f7;
+		}
+		.code {
+			margin-top: 10px;
+			width: auto;
+			padding: 10px;
+			line-height: 20px;
+			text-align: left;
+			background-color: #f5f5f5;
+			box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+		}
+		.example {
+			background-color: white;
+			padding: 10px;
+			border-radius: 6px;
+		}
+		button {
+			border: 0px;
+			background-color: #0ab2f7;
+			color: #fff;
+			cursor: pointer;
+			padding: 5px 10px 5px 10px;
+			box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+		}
+		a {
+			background-color: #0ab2f7;
+			padding:7px 20px 7px 20px;
+			color: white;
+			font-size: 15px;
+			border-radius: 10px;
+			box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+<div class="wrap-title"><h2 class="title">Documentation plugin elModal.js</h2></div>
+<br>
+	<div class="example">
+		<h3>Modal normal</h3>
+		<p>1. Simple modal normal</p>
+		<a href="demos/basic modal normal.html" title="">View demo</a><br>
+		<div class="code"><code><pre>
+// $('button').elModal();
+</pre></code></div>
+		<br>
+		<p>2. Modal normal with some options</p>
+		<a href="demos/basic modal normal with different size and styles.html" title="">View demo</a>
+		<div class="code">
+<code><pre>
+// $('button').elModal({
+type: 'normal',
+size: 'medium',
+items : {
+close : 'X',
+	header : '&lt;h3&gt;Hello world&lt;/h3&gt;',
+	content : '&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;',
+	footer : '&lt;span style="cursor:pointer" data-dismiss="elmahbub-modal"&gt;Accept&lt;/span&gt;'
+},
+styles : {
+	backgroundContent : '#ff0000',
+	colorContent: '#fff'
+}
+});</pre></code>
+		</div>
+	</div>
+	<div class="example">
+		<h3>Modal viewer</h3>
+		<p>1. Basic modal viewer</p>
+		<a href="demos/basic modal viewer.html" title="">View demo</a><br>
+		<div class="code"><code><pre>
+// $('button').elModal({
+type: 'viewer'
+});</pre></code></div>
+		<br>
+		<p>2. Modal viewer with some options</p>
+		<a href="demos/basic modal viewer with some option.html" title="">View demo</a><br>
+		<div class="code">
+<code><pre>
+// $('button').elModal({
+type: 'viewer',
+itemsViewer : {
+	close : '&amp;times;',
+	typeFile : 'image',
+	arrowLeft : '&amp;#10094;',
+	arrowRight : '&amp;#10095;',
+	toggleFullscreen : '&amp;#8599;',
+	playSlideShow : '&amp;#9654;',
+	stopSlideShow : '&amp;#9725;',
+	captions : '&lt;p style="margin-left:10px"&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;',
+	files : $('img'),
+	attributes : '',
+	contents : '&lt;p style="margin:10px"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod'+
+	'tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,'+
+		'quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo'+
+		'consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse'+
+		'cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non'+
+		'proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;'
+}
+});</pre></code>
+		</div>
+	</div>
+	<div class="example">
+		<h3>Modal gallery</h3>
+		<p>1. Basic modal gallery</p>
+		<a href="demos/basic modal gallery.html" title="">View demo</a><br>
+		<div class="code">
+		<code><pre>
+// $('button').elModal({
+type: 'gallery',
+itemsViewer : {
+	close : '&amp;times;',
+	typeFile : 'image',
+	arrowLeft : '&amp;#10094;',
+	arrowRight : '&amp;#10095;',
+	toggleFullscreen : '&amp;#8599;',
+	playSlideShow : '&amp;#9654;',
+	stopSlideShow : '&amp;#9725;',
+	captions : '&lt;p style="margin-left:10px"&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;',
+	files : $('img'),
+	attributes : '',
+	contents : '&lt;p style="margin:10px"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod'+
+	'tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,'+
+		'quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo'+
+		'consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse'+
+		'cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non'+
+		'proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;'
+}
+});</pre></code>
+	</div>
+		<br>
+		<p>2. Modal gallery with slideshow and thumbnails</p>
+		<a href="demos/basic modal gallery with slideshow and thumbnails.html" title="">View demo</a><br>
+		<div class="code">
+<code><pre>
+// $('button').elModal({
+type: 'gallery',
+itemsViewer : {
+	close : '&amp;times;',
+	typeFile : 'image',
+	arrowLeft : '&amp;#10094;',
+	arrowRight : '&amp;#10095;',
+	toggleFullscreen : '&amp;#8599;',
+	playSlideShow : '&amp;#9654;',
+	stopSlideShow : '&amp;#9725;',
+	captions : '&lt;p style="margin-left:10px"&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;',
+	files : $('img'),
+	attributes : '',
+	contents : '&lt;p style="margin:10px"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod'+
+	'tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,'+
+		'quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo'+
+		'consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse'+
+		'cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non'+
+		'proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;'
+},
+slideShow: true,
+thumbnailsEnabled: true
+});
+	</pre></code>
+		</div>
+		<div class="example">
+		<h3>Modal iframe</h3>
+		<p>1. Basic modal iframe</p>
+		<a href="demos/basic modal iframe.html" title="">View demo</a><br>
+		<div class="code">
+		<code><pre>
+// $('button').elModal({
+type: 'iframe',
+size: 'small',
+items : {
+close : 'X',
+	header : '&lt;h3&gt;Hello world&lt;/h3&gt;',
+	content : '&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;',
+	footer : '&lt;span style="cursor:pointer" data-dismiss="elmahbub-modal"&gt;Accept&lt;/span&gt;',
+	sourceIframe: $('a').attr('href')
+},
+styles : {
+	heightContent: '300px'
+}
+});</pre></code>
+	</div>
+	<br>
+	<h3>Options plugin</h3>
+	<code><pre>
+type : 'normal',			// Type modal : 'normal', 'viewer', 'gallery', 'iframe', 'normal and iframe'. Default : 'normal'. 
+size : 'small',				// Size modal : 'small', 'medium', 'large', 'fullscreen'. Default : 'small'.
+autoClose : true,  			// Option auto close modal
+timeOut : 240000,  			// 3 minutes for auto close -> default.
+escapeClose : true,			// Close modal with escape key
+outsideClose : false,	  		// Close modal with click outside modal
+templates : '',  			// Default template
+idTarget : '',
+styles : {  				// Styling template
+	backgroundModal : 'transparent',
+	backgroundContent : '#fff',
+	colorContent : '#000',
+	borderRadius : '0',
+	border: '0',
+	zIndexModal : '1065',
+	zIndexContent : '1065',
+	heightContent : '',
+	widthContent : ''
+},
+items : {					// Items modal normal. It also instead for normal + iframe
+	close : '&times;',
+	header : 'Title modal',	// Content header modal normal
+	content : '',			// Content body modal normal
+	footer : 'Finish',		// Content footer modal normal
+	sourceIframe : ''		// Source or link for modal iframe
+},
+itemsViewer : {				// Items modal viewer and gallery
+	close : '&amp;times;',
+	typeFile : 'image',		// Type file modal viewer : 'image', 'video'. Default : 'image'.
+	arrowLeft : '&amp;#10094;',		// Icon arrow left
+	arrowRight : '&amp;#10095;',	// Icon arrow right
+	toggleFullscreen : '&amp;#8599;',		// Icon toggle fullscreen
+	playSlideShow : '&amp;#9654;',			// Icon play slideshow
+	stopSlideShow : '&amp;#9725;',			// Icon stop slideshow
+	captions : '',			// Captions files modal viewer and gallery
+	files : '',				// Target files modal viewer and gallery.
+	attributes : '',		// Attributes files. (ex: controls,loop,autobuffer,autoloop etc for video).
+	contents : ''
+},
+titleButtons : {			// Title buttons
+	closeModal : 'Close',
+	prevSlide : 'Previous',
+	nextSlide : 'Next',
+	playSlide : 'Play slideshow',
+	stopSlide : 'Stop slideshow',
+	toggleFullscreen : 'Fullscreen mode'
+},
+thumbnailsEnabled : false,		// Option enabled and disabled thumbnails.
+setPosition : 'C',				// Options modal normal position, TL : Top left, TR : Top right, BL : Bottom left, BR : Bottom right, C : Center. Default : C.
+slideShow : false,				// Option for slide show. Default : false.
+timeSlideShow : 2000,			// Time repeat slide show.
+arrowKeyboard : true,			// Option arrow keyboard for slideshow.
+speed: 'fast',					// Speed for show and hide modal. Default : fast.
+fullscreenMode : true,			// Fullscreen mode for modal viewer and gallery. Default : false.
+targetFullscreen : 'data-elmahbub-fullscreen'	
+	</pre></code>
+	<br>
+	<hr>
+	<h4>MIT License</h4>
+	<script src="dist/jquery.min.js" type="text/javascript"></script>
+	<script src="dist/elModal.js" type="text/javascript"></script>
+	<script>
+	
+	</script>
+</body>
+</html>
